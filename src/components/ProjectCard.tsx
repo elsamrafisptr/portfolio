@@ -8,7 +8,9 @@ import { motion } from 'motion/react'
 import { urlFor } from '@/lib/utils'
 
 const ProjectCard = (props: Project) => {
-  const imageUrl = props.image && urlFor(props.image)?.width(1280).height(720).auto('format').quality(80).url()
+  const imageUrl =
+    props.image &&
+    urlFor(props.image)?.width(1280).height(720).auto('format').quality(80).url()
 
   return (
     <motion.div

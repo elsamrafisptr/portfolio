@@ -67,7 +67,7 @@ export default async function Home() {
   return (
     <main className="min-h-screen bg-[#fafafa]">
       <div className="flex min-h-screen max-w-full flex-col md:grid md:h-screen md:grid-cols-12 md:overflow-hidden">
-        <aside className="flex flex-col justify-end p-4 md:p-6 md:col-span-4 md:h-screen">
+        <aside className="flex flex-col justify-end p-4 md:col-span-4 md:h-screen md:p-6">
           <Hero profile={profileData} clients={clientsData} />
         </aside>
 

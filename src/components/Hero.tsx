@@ -18,12 +18,13 @@ const Hero = ({
   clients: Client[] | null
 }) => {
   const profileImageUrl =
-    profile?.avatar && urlFor(profile.avatar)?.width(100).height(100).auto('format').quality(80).url()
+    profile?.avatar &&
+    urlFor(profile.avatar)?.width(100).height(100).auto('format').quality(80).url()
 
   if (!profile) return null
 
   return (
-    <div className="w-full space-y-6 md:space-y-8 text-left">
+    <div className="w-full space-y-6 text-left md:space-y-8">
       <div className="relative h-16 w-16 overflow-hidden rounded-full">
         {profileImageUrl ? (
           <Image
