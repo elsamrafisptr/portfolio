@@ -65,20 +65,20 @@ const Hero = ({
         </p>
         <div className="w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_20%,black_80%,transparent)]">
           {clients && clients.length > 0 ? (
-            <Marquee className="max-w-full [--duration:8s]">
+            <Marquee className="max-w-full [--duration:12s]">
               {clients.map((client, index) => {
                 const clientImageUrl =
                   client.avatar &&
                   urlFor(client.avatar)?.width(100).auto('format').quality(80).url()
                 return (
-                  <div key={index} className="flex items-center gap-2 pr-8">
+                  <div key={index} className="flex items-center">
                     {clientImageUrl && (
-                      <div className="relative aspect-video h-16 overflow-hidden rounded-full">
+                      <div className="relative aspect-video h-16 overflow-hidden">
                         <Image
                           src={clientImageUrl}
                           alt={client.name}
                           fill
-                          className="object-cover grayscale"
+                          className="object-contain grayscale"
                         />
                       </div>
                     )}
