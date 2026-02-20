@@ -1,0 +1,9 @@
+pnpm run format
+
+pnpm run lint
+
+pnpm run format:check
+
+pnpm run types:check
+
+pnpm run build
