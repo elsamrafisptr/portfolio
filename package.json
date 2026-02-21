@@ -11,7 +11,18 @@
     "format:check": "prettier -c .",
     "types:check": "tsc --noEmit --pretty",
     "pre-commit": "sh ./.husky/pre-commit",
-    "prepare": "husky"
+    "prepare": "husky",
+    "analyze": "ANALYZE=true next build",
+    "lint-staged": "lint-staged"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "src/**/*.{json,css,md}": [
+      "prettier --write"
+    ]
   },
   "dependencies": {
     "@sanity/image-url": "^2.0.3",
@@ -34,6 +45,7 @@
     "tailwindcss-react-aria-components": "^2.0.1"
   },
   "devDependencies": {
+    "@next/bundle-analyzer": "^16.1.6",
     "@tailwindcss/postcss": "^4",
     "@trivago/prettier-plugin-sort-imports": "^6.0.2",
     "@types/node": "^20",
@@ -44,6 +56,7 @@
     "eslint-config-next": "16.1.6",
     "eslint-config-prettier": "^10.1.8",
     "husky": "^9.1.7",
+    "lint-staged": "^16.2.7",
     "postcss": "^8.5.6",
     "prettier": "^3.8.1",
     "prettier-plugin-tailwindcss": "^0.7.2",
